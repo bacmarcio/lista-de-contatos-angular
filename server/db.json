@@ -1,0 +1,20 @@
+{
+    "contacts": [
+        {
+            "id": "",
+            "name": "",
+            "company": "",
+            "email": "",
+            "title": "",
+            "mobile": "",
+            "photo": "",
+            "groupId": ""
+        }
+    ],
+    "groups": [
+        {
+            "id": "",
+            "name": ""
+        }
+    ]
+}
