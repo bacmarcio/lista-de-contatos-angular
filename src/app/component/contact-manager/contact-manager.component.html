@@ -3,9 +3,62 @@
         <div class="col">
             <p class="h3 text-danger fw-bold">NG Contacts
                 <a routerLink="/contacts/add" class="btn btn-danger btn-sm">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon">plus</mat-icon> new
+                    <mat-icon>add_circle</mat-icon> <span class="align-items-center">New</span>
                 </a>
             </p>
+            <p class="fst-italic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex temporibus vitae
+                quisquam, soluta in cum
+                voluptatem! Enim suscipit tempore ex. Enim, perferendis soluta pariatur magnam ullam dolore! Iure,
+                vitae.</p>
+            <form>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <div class="col">
+                                <input type="submit" class="btn btn-outline-dark" value="Search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- cards -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card list-group-item-danger shadow-lg">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-sm-4">
+                            <img src="https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small"
+                                class="contact-img" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Name: <span class="fw-bold">Name</span></li>
+                                <li class="list-group-item">E-mail: <span class="fw-bold">E-mail</span></li>
+                                <li class="list-group-item">Mobile: <span class="fw-bold">Mobile</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                            <a routerLink="contacts/view/contactId" class="btn btn-warning my-1">
+                                <mat-icon>visibility</mat-icon>
+                            </a>
+                            <a routerLink="contacts/edit/contactId" class="btn btn-primary my-1">
+                                <mat-icon>edit</mat-icon>
+                            </a>
+                            <button class="btn btn-danger my-1">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
