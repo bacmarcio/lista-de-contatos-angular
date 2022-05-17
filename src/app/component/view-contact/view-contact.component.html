@@ -9,19 +9,40 @@
         </div>
     </div>
 </div>
-<div class="container mt-3">
+<!-- Loading Spinner -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+<!-- Error Message -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- card -->
+<div class="container mt-3" *ngIf="!loading && isNotEmpty()">
     <div class="row align-items-center">
         <div class="col-sm-4">
-            <img src="https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small" class="contact-img-big" alt="">
+            <img [src]="contact.photo" class="contact-img-big" alt="">
         </div>
         <div class="col-sm-6">
             <ul class="list-group">
-                <li class="list-group-item list-group-item-danger">Name: <span class="fw-bold">Name</span></li>
-                <li class="list-group-item list-group-item-danger">E-mail: <span class="fw-bold">E-mail</span></li>
-                <li class="list-group-item list-group-item-danger">Mobile: <span class="fw-bold">Mobile</span></li>
-                <li class="list-group-item list-group-item-danger">Company: <span class="fw-bold">Company</span></li>
-                <li class="list-group-item list-group-item-danger">Title: <span class="fw-bold">Title</span></li>
-                <li class="list-group-item list-group-item-danger">Group: <span class="fw-bold">Group</span></li>
+                <li class="list-group-item list-group-item-danger">Name: <span class="fw-bold">{{contact.name}}</span>
+                </li>
+                <li class="list-group-item list-group-item-danger">E-mail: <span
+                        class="fw-bold">{{contact.email}}</span></li>
+                <li class="list-group-item list-group-item-danger">Mobile: <span
+                        class="fw-bold">{{contact.mobile}}</span></li>
+                <li class="list-group-item list-group-item-danger">Company: <span
+                        class="fw-bold">{{contact.company}}</span></li>
+                <li class="list-group-item list-group-item-danger">Title: <span class="fw-bold">{{contact.title}}</span>
+                </li>
+                <li class="list-group-item list-group-item-danger">Group: <span class="fw-bold">{{group.name}}</span>
+                </li>
             </ul>
         </div>
     </div>
