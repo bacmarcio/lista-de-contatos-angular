@@ -41,22 +41,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/0.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/0.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/0.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/0.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/1.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/2.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/3.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/4.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/5.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/6.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/7.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/8.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/9.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/10.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/11.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/13.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/index.pack
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/index.pack.old
-.angular/cache/13.3.5/angular-webpack/e2f1756a1ced737e4671698b4c611dcaee2e110b/0.pack
+.angular/
