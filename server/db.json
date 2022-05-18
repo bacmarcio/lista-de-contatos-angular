@@ -1,20 +1,50 @@
 {
     "contacts": [
         {
-            "id": "",
-            "name": "",
-            "company": "",
-            "email": "",
-            "title": "",
-            "mobile": "",
-            "photo": "",
-            "groupId": ""
+            "id": "D6BNdWNHI",
+            "name": "Marcio Maia",
+            "company": "Grupo AVS",
+            "email": "marciomaia.ti@grupoavs.com",
+            "title": "Programador",
+            "mobile": "61982048889",
+            "photo": "https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small",
+            "groupId": "3"
+        },
+        {
+            "id": "TVobxeKbI",
+            "name": "Glenda Kim",
+            "company": "Grupo Aqua",
+            "email": "glenda@grupoavs.com",
+            "title": "Frelancer",
+            "mobile": "61982048889",
+            "photo": "https://pbs.twimg.com/media/ElENQo-U8AA_1jS?format=jpg&name=small",
+            "groupId": "4"
         }
     ],
     "groups": [
         {
-            "id": "",
-            "name": ""
+            "id": "1",
+            "name": "Colleague"
+        },
+        {
+            "id": "2",
+            "name": "Friend"
+        },
+        {
+            "id": "3",
+            "name": "Family"
+        },
+        {
+            "id": "4",
+            "name": "Service"
+        },
+        {
+            "id": "5",
+            "name": "Comunity"
+        },
+        {
+            "id": "6",
+            "name": "Social"
         }
     ]
 }

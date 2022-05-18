@@ -29,13 +29,13 @@ export class ViewContactComponent implements OnInit {
       this.contactService.getContact(this.contactId).subscribe((data: IContact) => {
         this.contact = data;
         this.loading = false;
-        this.contactService.getGroup(data).subscribe(next => (data: IGroup) => {
+        this.contactService.getGroup(data).subscribe((data: IGroup) => {
           this.group = data;
         })
       }, (error) => {
         this.errorMessage = error;
         this.loading = false;
-      })
+      });
     }
 
   }
@@ -45,7 +45,5 @@ export class ViewContactComponent implements OnInit {
   }
 
 }
-function next(next: any, arg1: (data: IGroup) => void) {
-  throw new Error('Function not implemented.');
-}
+
 

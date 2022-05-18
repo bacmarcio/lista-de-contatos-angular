@@ -55,26 +55,26 @@ export class ContactService {
   //Get all grups
 
   public getAllGrups(): Observable<IGroup[]> {
-    let dataURL: string = `${this.serverUrl}/contacts`;
+    let dataURL: string = `${this.serverUrl}/groups`;
     return this.HttpClient.get<IGroup[]>(dataURL).pipe(catchError(this.handleError));
   }
 
-  //Get single grups
+  //Get single group
 
-  public getGroup(contact: IContact): Observable<IGroup[]> {
-    let dataURL: string = `${this.serverUrl}/contacts/${contact.groupId}`;
-    return this.HttpClient.get<IGroup[]>(dataURL).pipe(catchError(this.handleError));
+  public getGroup(contact: IContact): Observable<IGroup> {
+    let dataURL: string = `${this.serverUrl}/groups/${contact.groupId}`;
+    return this.HttpClient.get<IGroup>(dataURL).pipe(catchError(this.handleError));
   }
-
-
 
   // Error Handle
 
   public handleError(error: HttpErrorResponse) {
     let errorMessage: string = '';
     if (error.error instanceof ErrorEvent) {
+      //client Error
       errorMessage = `Error: ${error.error.message}`
     } else {
+      //server Error
       errorMessage = `Status : ${error.status} \n Message: ${error.message}`;
     }
     return throwError(errorMessage);

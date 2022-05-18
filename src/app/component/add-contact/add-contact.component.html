@@ -9,6 +9,7 @@
         </div>
     </div>
 </div>
+<pre>{{groups | json}}</pre>
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-3">
@@ -19,11 +20,16 @@
                 <div class="mb-2"><input type="text" class="form-control" placeholder="Mobile"></div>
                 <div class="mb-2"><input type="text" class="form-control" placeholder="Company"></div>
                 <div class="mb-2"><input type="text" class="form-control" placeholder="Title"></div>
-                <select name="" class="form-control mb-2 text-secondary" id="">
-                    <option value="">Select a list-group</option>
-                </select>
-                <input type="submit" class="btn btn-danger" value="Create">
-                <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+                <div class="mb-2">
+                    <select *ngIf="groups.length > 0" name="" class="form-control mb-2 text-secondary" id="">
+                        <option value="">Select a list-group</option>
+                        <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <input type="submit" class="btn btn-danger" value="Create">
+                    <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+                </div>
             </form>
         </div>
         <div class="col-sm-4">
