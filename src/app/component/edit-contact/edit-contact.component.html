@@ -1,7 +1,7 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col">
-            <p class="h3 fw-bold text-danger">Edit Contact</p>
+            <p class="h3 fw-bold text-danger">Editar Contato</p>
             <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita officiis totam quam
                 aliquam. Expedita
                 officiis perspiciatis laudantium at molestiae, sapiente facere veniam eum alias ex repellendus, ducimus,
@@ -13,25 +13,25 @@
     <div class="row">
         <div class="col-sm-3">
             <form (submit)="submitUpdate()">
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Name" [(ngModel)]="contact.name"
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Nome" [(ngModel)]="contact.name"
                         name="name" [value]="contact.name"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Foto URL"
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Link da Foto"
                         [(ngModel)]="contact.photo" name="photo" [value]="contact.photo"></div>
                 <div class="mb-2"><input type="text" class="form-control" placeholder="E-mail"
                         [(ngModel)]="contact.email" name="email" [value]="contact.email"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Mobile"
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Telefone"
                         [(ngModel)]="contact.mobile" name="mobile" [value]="contact.mobile"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Company"
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Empresa"
                         [(ngModel)]="contact.company" name="company" [value]="contact.company"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Title"
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Profissão"
                         [(ngModel)]="contact.title" name="title" [value]="contact.title"></div>
                 <select [(ngModel)]="contact.groupId" [value]="contact.groupId" name="groupId"
                     class="form-control mb-2 text-secondary" id="">
-                    <option value="">Select a list-group</option>
+                    <option value="">Grupo de Contatos</option>
                     <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
                 </select>
-                <input type="submit" class="btn btn-danger" value="Update">
-                <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+                <input type="submit" class="btn btn-danger" value="Atualizar">
+                <a routerLink="/" class="btn btn-dark ms-2">Fechar</a>
             </form>
         </div>
         <div class="col-sm-4">

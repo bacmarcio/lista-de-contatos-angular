@@ -1,50 +1,29 @@
 {
-  "contacts": [
-    {
-      "id": "D6BNdWNHI",
-      "name": "Marcio Maia",
-      "company": "Grupo AVS",
-      "email": "marciomaia.ti@grupoavs.com",
-      "title": "Programador",
-      "mobile": "61982048889",
-      "photo": "https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small",
-      "groupId": "3"
-    },
-    {
-      "name": "Livia Maria",
-      "photo": "https://pbs.twimg.com/media/ElENQo-U8AA_1jS?format=jpg&name=small",
-      "email": "liviamaria@gmail.com",
-      "mobile": "6133313333",
-      "company": "Lar",
-      "title": "Redatora",
-      "groupId": "3",
-      "id": "iJ6Tb1T"
-    }
-  ],
+  "contacts": [],
   "groups": [
     {
       "id": "1",
-      "name": "Colleague"
+      "name": "Escola"
     },
     {
       "id": "2",
-      "name": "Friend"
+      "name": "Amigos"
     },
     {
       "id": "3",
-      "name": "Family"
+      "name": "Família"
     },
     {
       "id": "4",
-      "name": "Service"
+      "name": "Serviços"
     },
     {
       "id": "5",
-      "name": "Comunity"
+      "name": "Comunidade"
     },
     {
       "id": "6",
-      "name": "Social"
+      "name": "Trabalho"
     }
   ]
 }

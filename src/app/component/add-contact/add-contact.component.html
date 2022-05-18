@@ -1,7 +1,7 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col">
-            <p class="h3 fw-bold text-danger">Add Contact</p>
+            <p class="h3 fw-bold text-danger">Add Contato</p>
             <p class="fst-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita officiis totam quam
                 aliquam. Expedita
                 officiis perspiciatis laudantium at molestiae, sapiente facere veniam eum alias ex repellendus, ducimus,
@@ -28,11 +28,11 @@
         <div class="col-sm-3">
             <form (submit)="createSubmit()">
                 <div class="mb-2">
-                    <input [(ngModel)]="contact.name" type="text" class="form-control" name="name" placeholder="Name">
+                    <input [(ngModel)]="contact.name" type="text" class="form-control" name="name" placeholder="Nome">
                 </div>
                 <div class="mb-2">
                     <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control"
-                        placeholder="Foto URL">
+                        placeholder="Link da Foto">
                 </div>
                 <div class="mb-2">
                     <input type="text" [(ngModel)]="contact.email" class="form-control" name="email"
@@ -40,26 +40,26 @@
                 </div>
                 <div class="mb-2">
                     <input type="text" [(ngModel)]="contact.mobile" class="form-control" name="mobile"
-                        placeholder="Mobile">
+                        placeholder="Telefone">
                 </div>
                 <div class="mb-2">
                     <input type="text" [(ngModel)]="contact.company" class="form-control" name="company"
-                        placeholder="Company">
+                        placeholder="Empresa">
                 </div>
                 <div class="mb-2">
                     <input type="text" [(ngModel)]="contact.title" class="form-control" name="title"
-                        placeholder="Title">
+                        placeholder="Profissão">
                 </div>
                 <div class="mb-2">
                     <select *ngIf="groups.length > 0" [(ngModel)]="contact.groupId" name="groupId"
                         class="form-control mb-2 text-secondary" id="">
-                        <option value="">Select a list-group</option>
+                        <option value="">Grupo de Contatos</option>
                         <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
                     </select>
                 </div>
                 <div class="mb-2">
-                    <input type="submit" class="btn btn-danger" value="Create">
-                    <a routerLink="/" class="btn btn-dark ms-2">Close</a>
+                    <input type="submit" class="btn btn-danger" value="Adicionar">
+                    <a routerLink="/" class="btn btn-dark ms-2">Fechar</a>
                 </div>
             </form>
         </div>
