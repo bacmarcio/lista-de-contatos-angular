@@ -65,7 +65,7 @@
                             <a routerLink="/contacts/edit/{{contact.id}}" class="btn btn-primary my-1">
                                 <mat-icon>edit</mat-icon>
                             </a>
-                            <button class="btn btn-danger my-1">
+                            <button class="btn btn-danger my-1" (click)="clickDeleteContact(contact.id)">
                                 <mat-icon>delete</mat-icon>
                             </button>
                         </div>
