@@ -9,19 +9,50 @@
         </div>
     </div>
 </div>
-<pre>{{groups | json}}</pre>
+<!-- Loading Spinner -->
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
+<!-- Error Message -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-3">
-            <form>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Name"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Foto URL"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="E-mail"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Mobile"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Company"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Title"></div>
+            <form (submit)="createSubmit()">
                 <div class="mb-2">
-                    <select *ngIf="groups.length > 0" name="" class="form-control mb-2 text-secondary" id="">
+                    <input [(ngModel)]="contact.name" type="text" class="form-control" name="name" placeholder="Name">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control"
+                        placeholder="Foto URL">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="contact.email" class="form-control" name="email"
+                        placeholder="E-mail">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="contact.mobile" class="form-control" name="mobile"
+                        placeholder="Mobile">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="contact.company" class="form-control" name="company"
+                        placeholder="Company">
+                </div>
+                <div class="mb-2">
+                    <input type="text" [(ngModel)]="contact.title" class="form-control" name="title"
+                        placeholder="Title">
+                </div>
+                <div class="mb-2">
+                    <select *ngIf="groups.length > 0" [(ngModel)]="contact.groupId" name="groupId"
+                        class="form-control mb-2 text-secondary" id="">
                         <option value="">Select a list-group</option>
                         <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
                     </select>
@@ -33,7 +64,7 @@
             </form>
         </div>
         <div class="col-sm-4">
-            <img src="https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small" class="contact-img" alt="">
+            <img [src]="contact.photo" name="photo" class="contact-img" alt="">
         </div>
     </div>
 </div>

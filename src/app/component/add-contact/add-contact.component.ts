@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IContact } from 'src/app/models/iContact';
 import { IGroup } from 'src/app/models/iGroup';
 import { ContactService } from 'src/app/services/contact.service';
@@ -15,7 +16,7 @@ export class AddContactComponent implements OnInit {
   public errorMessage: string | null = null;
   public groups: IGroup[] = [] as IGroup[];
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService, private router: Router) { }
 
   ngOnInit(): void {
     this.contactService.getAllGrups().subscribe((data: IGroup[]) => {
@@ -24,5 +25,12 @@ export class AddContactComponent implements OnInit {
       this.errorMessage = error;
     })
   }
-
+  public createSubmit() {
+    this.contactService.createContact(this.contact).subscribe((data: IContact) => {
+      this.router.navigate(['/']).then();
+    }, (error) => {
+      this.errorMessage = error;
+      this.router.navigate(['/contacts/add']).then();
+    });
+  }
 }
