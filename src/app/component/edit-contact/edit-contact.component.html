@@ -12,22 +12,30 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-3">
-            <form>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Name"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Foto URL"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="E-mail"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Mobile"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Company"></div>
-                <div class="mb-2"><input type="text" class="form-control" placeholder="Title"></div>
-                <select name="" class="form-control mb-2 text-secondary" id="">
+            <form (submit)="submitUpdate()">
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Name" [(ngModel)]="contact.name"
+                        name="name" [value]="contact.name"></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Foto URL"
+                        [(ngModel)]="contact.photo" name="photo" [value]="contact.photo"></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="E-mail"
+                        [(ngModel)]="contact.email" name="email" [value]="contact.email"></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Mobile"
+                        [(ngModel)]="contact.mobile" name="mobile" [value]="contact.mobile"></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Company"
+                        [(ngModel)]="contact.company" name="company" [value]="contact.company"></div>
+                <div class="mb-2"><input type="text" class="form-control" placeholder="Title"
+                        [(ngModel)]="contact.title" name="title" [value]="contact.title"></div>
+                <select [(ngModel)]="contact.groupId" [value]="contact.groupId" name="groupId"
+                    class="form-control mb-2 text-secondary" id="">
                     <option value="">Select a list-group</option>
+                    <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
                 </select>
                 <input type="submit" class="btn btn-danger" value="Update">
                 <a routerLink="/" class="btn btn-dark ms-2">Close</a>
             </form>
         </div>
         <div class="col-sm-4">
-            <img src="https://pbs.twimg.com/media/EbNX_erVcAUlwIx?format=jpg&name=small" class="contact-img" alt="">
+            <img [src]="contact.photo" class="contact-img" alt="">
         </div>
     </div>
 </div>
